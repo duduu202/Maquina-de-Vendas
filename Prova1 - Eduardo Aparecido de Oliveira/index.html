@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="MaquinaVendas.js"></script>
+    <title>Máquina de Vendas</title>
+</head>
+
+<body>
+    <div class="maquina">
+        <div class="painel">
+            <div class="painel_esquerdo">
+                <h1>Máquina de Vendas</h1>
+                <div class="depositar">
+                    <div class="saldo">
+                        <h3>Saldo</h3>
+                        <div class="saldo_valor">
+                            <div>R$</div>
+                            <div id="saldo"></div>
+                        </div>
+                    </div>
+                    <h3>Depositar</h3>
+                    <div class="depositar_valor">
+                        <div>+R$</div>
+                        <div id="depositar"></div>
+                    </div>
+                    <div class="teclado_numerico">
+                        <li class="tecla" onclick="addNumeroDepositar(1)">1</li>
+                        <li class="tecla" onclick="addNumeroDepositar(2)">2</li>
+                        <li class="tecla" onclick="addNumeroDepositar(3)">3</li>
+                        <li class="tecla" onclick="addNumeroDepositar(4)">4</li>
+                        <li class="tecla" onclick="addNumeroDepositar(5)">5</li>
+                        <li class="tecla" onclick="addNumeroDepositar(6)">6</li>
+                        <li class="tecla" onclick="addNumeroDepositar(7)">7</li>
+                        <li class="tecla" onclick="addNumeroDepositar(8)">8</li>
+                        <li class="tecla" onclick="addNumeroDepositar(9)">9</li>
+                        <li class="tecla" onclick="apagarNumeroDepositar()">⌫</li>
+                        <li class="tecla" onclick="addNumeroDepositar(0)">0</li>
+                        <li class="tecla" onclick="depositar()">Confirmar</li>
+                        <button class="tecla" onclick="retirarDinheiro()">retirar dinheiro</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="painel_central">
+                <div id="produtos">
+                    <div class="produto">Nenhum produto registrado</div>
+                    <div class="produto">Nenhum produto registrado</div>
+                    <div class="produto">Nenhum produto registrado</div>
+                    <div class="produto">Nenhum produto registrado</div>
+                    <div class="produto">Nenhum produto registrado</div>
+                </div>
+
+            </div>
+            <div class="painel_direito">
+                <div class="navegacao">
+                    <h4>selecione o produto:</h4>
+                    <button class="seta" onclick="setaCima()">↑</button>
+                    <div id="selecionar"></div>
+                    <button class="seta" onclick="setaBaixo()">↓</button>
+                    <button class="seta" onclick="comprar()">Comprar</button>
+                    <h3>Selecionado:</h3>
+                    <div id="item_selecionado"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        iniciar();
+    </script>
+
+</body>
+
+</html>
